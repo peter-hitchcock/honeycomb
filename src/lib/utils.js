@@ -58,6 +58,10 @@ const importAll = (r) => {
 
 const images = importAll(requireContext('../assets/images', false, /\.(png|jpe?g|svg)$/));
 
+// const fractal_images = importAll(
+//   require.context("./../../images/fractals/", false, /\.(png|jpe?g|svg)$/)
+// );
+
 const getTurkUniqueId = () => {
   const turkInfo = jsPsych.turk.turkInfo()
   const uniqueId = `${turkInfo.workerId}:${turkInfo.assignmentId}`
@@ -103,6 +107,7 @@ export {
   formatDollars,
   generateWaitSet,
   images,
+  //fractal_images,
   startKeypressListener,
   getProlificId,
   getTurkUniqueId,
