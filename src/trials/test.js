@@ -12,7 +12,7 @@ const test = () => {
 //  const startCode = eventCodes.fixationStart;
   return {
     
-        type: 'poldrack-multi-stim-multi-response',
+        type: 'poldrack_multi_stim_multi_response',
         stimuli: '',
         is_html: true,
         data: {
@@ -25,7 +25,7 @@ const test = () => {
         timing_response: 2000,
         response_ends_trial: true,
         on_finish: function() {
-        // curr_data.trial_num = 1
+         let trial_num = 1
         // jsPsych.data.addDataToLastTrial(curr_data)
         //current_trial += 1
         },
