@@ -23,8 +23,8 @@ import {
 let primaryTimeline = [
   preamble,
   //test2(),
-  //test(), // as function 
-  test, // as variable
+  test(), // as function 
+  //test, // as variable
   ageCheck,
   sliderCheck,
   countdown({ message: lang.countdown.message1 }),
