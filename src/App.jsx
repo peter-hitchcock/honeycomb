@@ -14,6 +14,8 @@ import { initParticipant, addToFirebase } from './firebase'
 import { config } from './config/main'
 import { version } from '../package.json'
 
+import { poldrack_multi_stim_multi_response } from './lib/poldrack_multi_stim_multi_response'
+
 function App () {
   // Variables for time
   const startDate = new Date().toISOString()
@@ -25,6 +27,7 @@ function App () {
   const [envStudyId, setEnvStudyId] = useState('')
   const [currentMethod, setMethod] = useState('default')
   const [reject, setReject] = useState(false)
+  jsPsych.plugins['poldrack_multi_stim_multi_response'] = poldrack_multi_stim_multi_response();
 
   const query = new URLSearchParams(window.location.search)
 

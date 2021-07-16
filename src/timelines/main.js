@@ -7,6 +7,8 @@ import { practiceBlock } from "../config/practice";
 import { tutorialBlock } from "../config/tutorial";
 import { exptBlock1, exptBlock2 } from "../config/experiment";
 import { showMessage } from "@brown-ccv/behavioral-task-trials";
+import { test } from "../trials/test";
+
 import {
   ageCheck,
   sliderCheck,
@@ -17,6 +19,7 @@ import {
 
 let primaryTimeline = [
   preamble,
+  test(),
   ageCheck,
   sliderCheck,
   countdown({ message: lang.countdown.message1 }),
