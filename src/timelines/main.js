@@ -9,6 +9,7 @@ import { exptBlock1, exptBlock2 } from "../config/experiment";
 import { showMessage } from "@brown-ccv/behavioral-task-trials";
 //import { test } from "../trials/test";
 import { test } from "../trials/test";
+//import { test } from "../trials/test";
 import { test2 } from "../trials/test2";
 
 import {
@@ -22,7 +23,8 @@ import {
 let primaryTimeline = [
   preamble,
   //test2(),
-  test(),
+  //test(), // as function 
+  test, // as variable
   ageCheck,
   sliderCheck,
   countdown({ message: lang.countdown.message1 }),
