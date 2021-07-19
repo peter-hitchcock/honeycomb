@@ -15,7 +15,9 @@ import { config } from './config/main'
 import { version } from '../package.json'
 
 //import { poldrack_multi_stim_multi_response } from './lib/poldrack_multi_stim_multi_response';
-import { alt_multi_stim_multi_response } from './lib/alt_multi_stim_multi_response';
+//import { alt_multi_stim_multi_response } from './lib/alt_multi_stim_multi_response';
+//import { image_button_test } from './lib/image_button_test';
+import { msmr } from "./lib/msmr";
 
 function App () {
   // Variables for time
@@ -29,7 +31,9 @@ function App () {
   const [currentMethod, setMethod] = useState('default')
   const [reject, setReject] = useState(false)
   //jsPsych.plugins['poldrack_multi_stim_multi_response'] = poldrack_multi_stim_multi_response();
-  jsPsych.plugins['alt_multi_stim_multi_response'] = alt_multi_stim_multi_response();
+  //jsPsych.plugins['alt_multi_stim_multi_response'] = alt_multi_stim_multi_response();
+  //jsPsych.plugins['image_button_test'] = image_button_test();
+  jsPsych.plugins['msmr'] = msmr();
 
   const query = new URLSearchParams(window.location.search)
 

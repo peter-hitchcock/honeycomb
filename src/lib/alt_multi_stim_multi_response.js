@@ -24,7 +24,7 @@ export function alt_multi_stim_multi_response() {
     var plugin = {};
 
     plugin.info = {
-            name: 'alt_multi_stim_multi_response',
+            name: 'alt-multi-stim-multi-response',
             //name: 'alt-multi-stim-multi-response',
             description: '',
             parameters: {
@@ -99,8 +99,10 @@ export function alt_multi_stim_multi_response() {
         };
 
 
-    jsPsych.pluginAPI.registerPreload('multi-stim-multi-response', 'stimuli', 'image'); // 7.19 - commenting this didn't fix error 
-
+    //jsPsych.pluginAPI.registerPreload('multi-stim-multi-response', 'stimuli', 'image'); // 7.19 - commenting this didn't fix error 
+    //jsPsych.pluginAPI.registerPreload('alt_multi_stim_multi_response', 'stimuli', 'image');
+    jsPsych.pluginAPI.registerPreload('alt-multi-stim-multi-response', 'stimuli', 'image');
+    //jsPsych.pluginAPI.registerPreload('stimuli', 'image');
 //   var a = 3;
 //   console.log(3);
 
@@ -173,7 +175,7 @@ export function alt_multi_stim_multi_response() {
 
         for (var j = 0; j < trial.choices[i].length; j++) {
           let keycode = 68; 
-          keycode = (typeof trial.choices[i][j] == 'string') ? jsPsych.pluginAPI.convertKeyCharacterToKeyCode(trial.choices[i][j]) : trial.choices[i][j]; //** NEED TO FIX LATER 
+          //let keycode = (typeof trial.choices[i][j] == 'string') ? jsPsych.pluginAPI.convertKeyCharacterToKeyCode(trial.choices[i][j]) : trial.choices[i][j]; //** NEED TO FIX LATER 
           if (info.key == keycode) {
             whichResponse = i;
             break;

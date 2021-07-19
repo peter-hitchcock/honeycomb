@@ -8,9 +8,10 @@ import { tutorialBlock } from "../config/tutorial";
 import { exptBlock1, exptBlock2 } from "../config/experiment";
 import { showMessage } from "@brown-ccv/behavioral-task-trials";
 //import { test } from "../trials/test";
-import { test } from "../trials/test";
-//import { test } from "../trials/test";
-import { test2 } from "../trials/test2";
+
+//import { test2 } from "../trials/test2";
+//import { test3 } from "../trials/test3";
+import { test4 } from "../trials/test4";
 
 import {
   ageCheck,
@@ -22,8 +23,11 @@ import {
 
 let primaryTimeline = [
   preamble,
+  //test(),
   //test2(),
-  test(), // as function 
+  //test3(),
+  test4(),
+  //test(), // as function 
   //test, // as variable
   ageCheck,
   sliderCheck,
