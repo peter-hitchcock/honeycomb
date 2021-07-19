@@ -6,9 +6,14 @@ import { pdSpotEncode, photodiodeGhostBox } from "../lib/markup/photodiode";
 import { fixationHTML } from "../lib/markup/fixation";
 import { jsPsych } from "jspsych-react";
 
+
+//let stimuli = ["../assets/images/blue_payout_correct_10.png", "../assets/images/blue_payout_correct_100.png"]
+let stimuli = ["/blue_payout_correct_10.png", "/blue_payout_correct_100.png"];
+jsPsych.pluginAPI.preloadImages(stimuli);
+
 const test = () => {
 //let stimuli = [images[0], images[1]];  // also doesn't work 
-let stimuli = [images[0], images[1]]; 
+//let stimuli = [images[0], images[1]]; 
 
 const startCode = eventCodes.fixationStart;
 
@@ -16,13 +21,13 @@ const startCode = eventCodes.fixationStart;
     //type: "poldrack_multi_stim_multi_response",
     type: "alt_multi_stim_multi_response",
     stimuli: stimuli,
-    is_html: true,
-    data: {
-        trial_id: 'stim',
-        exp_stage: 'practice'
-    },
+    is_html: true,//false,//true,
+    // data: {
+    //     trial_id: 'stim',
+    //     exp_stage: 'practice'
+    // },
     choices: jsPsych.NO_KEYS,
-    timing_response: 100000,
+    timing_response: 2000,
     response_ends_trial: true,
     timing_stim: 2000, //getISI, replace
     on_load: () => {

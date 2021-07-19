@@ -152,9 +152,9 @@ export function alt_multi_stim_multi_response() {
         "block_duration": block_duration,
         "timing_post_trial": trial.timing_post_trial
       };
-
+      //jsPsych.display_element.html('');
       // clear the display
-      display_element.html('');
+      //display_element.html('');
 
       // move on to the next trial
       jsPsych.finishTrial(trial_data);
