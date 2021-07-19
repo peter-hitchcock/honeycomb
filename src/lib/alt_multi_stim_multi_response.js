@@ -16,12 +16,89 @@ import * as $ from 'jquery'
 
 //import { jquery } from "./../../public/lib/jquery-min"
 
-export function poldrack_multi_stim_multi_response() {
+export function alt_multi_stim_multi_response() {
 //const msm = () => {
 //jsPsych.plugins["poldrack-multi-stim-multi-response"] = (function() {
 //export function msm() {  
 
-  var plugin = {};
+    var plugin = {};
+
+  plugin.info = {
+        //name: 'alt_multi_stim_multi_response',
+        name: 'alt-multi-stim-multi-response',
+        description: '',
+        parameters: {
+        stimuli: {
+            type: jsPsych.plugins.parameterType.IMAGE,
+            pretty_name: 'Stimuli',
+            default: undefined,
+            description: 'The image or images to be displayed'
+        },
+        stimulus_height: {
+            type: jsPsych.plugins.parameterType.INT,
+            pretty_name: 'Image height',
+            default: null,
+            description: 'Set the image height in pixels'
+        },
+        stimulus_width: {
+            type: jsPsych.plugins.parameterType.INT,
+            pretty_name: 'Image width',
+            default: null,
+            description: 'Set the image width in pixels'
+        },
+        maintain_aspect_ratio: {
+            type: jsPsych.plugins.parameterType.BOOL,
+            pretty_name: 'Maintain aspect ratio',
+            default: true,
+            description: 'Maintain the aspect ratio after setting width or height'
+        },
+        choices: {
+            type: jsPsych.plugins.parameterType.STRING,
+            pretty_name: 'Choices',
+            default: undefined,
+            array: true,
+            description: 'The responses that can be received.'
+        },
+        timing_response: {
+            type: jsPsych.plugins.parameterType.INT,
+            pretty_name: 'Response duration',
+            default: null,
+            description: 'How long to allow response.'
+        },
+        timing_stim: {
+            type: jsPsych.plugins.parameterType.INT,
+            pretty_name: 'Trial duration',
+            default: null,
+            description: 'How long to show the trial.'
+        },
+        margin_vertical: {
+            type: jsPsych.plugins.parameterType.STRING,
+            pretty_name: 'Margin vertical',
+            default: '0px',
+            description: 'The vertical margin of the button.'
+        },
+        margin_horizontal: {
+            type: jsPsych.plugins.parameterType.STRING,
+            pretty_name: 'Margin horizontal',
+            default: '8px',
+            description: 'The horizontal margin of the button.'
+        },
+        response_ends_trial: {
+            type: jsPsych.plugins.parameterType.BOOL,
+            pretty_name: 'Response ends trial',
+            default: true,
+            description: 'If true, then trial will end when user responds.'
+        },
+        is_html: {
+            type: jsPsych.plugins.parameterType.BOOL,
+            pretty_name: 'Whether html',
+            default: true,
+            description: 'If true, then trial looks for src tag.'
+        },
+        }
+    };
+
+  
 
   jsPsych.pluginAPI.registerPreload('multi-stim-multi-response', 'stimuli', 'image');
   // does make it here
@@ -193,7 +270,7 @@ export function poldrack_multi_stim_multi_response() {
     // this evaluates the function and replaces
     // it with the output of the function
     
-    trial = jsPsych.pluginAPI.evaluateFunctionParameters(trial);
+    //trial = jsPsych.pluginAPI.evaluateFunctionParameters(trial);
     // tried the below plus commenting that line but didn't  work 
     //plugin.info 
     // trial.info = {

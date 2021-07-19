@@ -8,12 +8,13 @@ import { jsPsych } from "jspsych-react";
 
 const test = () => {
 //let stimuli = [images[0], images[1]];  // also doesn't work 
-let stimuli = images[1]; 
+let stimuli = [images[0], images[1]]; 
 
 const startCode = eventCodes.fixationStart;
 
   return {
-    type: "poldrack_multi_stim_multi_response",
+    //type: "poldrack_multi_stim_multi_response",
+    type: "alt_multi_stim_multi_response",
     stimuli: stimuli,
     is_html: true,
     data: {
