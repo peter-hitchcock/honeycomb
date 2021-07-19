@@ -98,12 +98,11 @@ export function alt_multi_stim_multi_response() {
             }
         };
 
-  
 
-  jsPsych.pluginAPI.registerPreload('multi-stim-multi-response', 'stimuli', 'image');
-  // does make it here
-  var a = 3;
-  console.log(3);
+    jsPsych.pluginAPI.registerPreload('multi-stim-multi-response', 'stimuli', 'image'); // 7.19 - commenting this didn't fix error 
+
+//   var a = 3;
+//   console.log(3);
 
   plugin.trial = function(display_element, trial) {
 
